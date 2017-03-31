@@ -14,11 +14,11 @@ coordinates.png: SCFLAGS := --camera=40,12.5,0,0,0,0,180 --projection=ortho --au
 
 %.png: %.scad
 	$(XVFB_RUN) openscad $(SCFLAGS) --imgsize 7680,5120 -o $*_4x.png $^
-	convert -geometry 25% $*_4x.png $@
+	pngtopnm $*_4x.png | pnmscale .25 | pnmtopng > $@
 	rm -f $*_4x.png
 
 hexbrick-preview.png: hexbrick-demo.png
-	convert -geometry 50% $< $@
+	pngtopnm $< | pnmscale .50 | pnmtopng > $@
 
 
 .PHONY: clean
