@@ -41,9 +41,9 @@ short_advance = base_width * sqrt(3);
 // advance from to flat of hex
 long_advance = 1.5 * base_width;
 
-X = [1,0,0];
-Y = [0,1,0]; XY = X+Y;
-Z = [0,0,1]; XZ = X+Z; YZ = Y+Z; XYZ=X+Y+Z;
+X = 1*[1,0,0];
+Y = 1*[0,1,0]; XY = X+Y;
+Z = 1*[0,0,1]; XZ = X+Z; YZ = Y+Z; XYZ=X+Y+Z;
 
 module cube_cc(sz, cc) {
     translate([sz[0] * cc[0] * -.5, sz[1] * cc[1] * -.5, sz[2] * cc[2] *-.5])
