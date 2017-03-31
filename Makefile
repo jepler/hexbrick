@@ -6,7 +6,7 @@ hexbrick-demo.scad: hexbrick-lib.scad demo.scad
 %.stl: %.scad
 	openscad -o $@ $^
 
-XVFB_RUN := xvfb-run -s "-screen 0 1024x768x24"
+XVFB_RUN := xvfb-run -s "-screen 0 1024x768x24" -a
 
 %.png: %.scad
 	$(XVFB_RUN) openscad --camera=15,20,0,30,0,25,120 --autocenter --imgsize 7680,5120 -o $*_4x.png $^
