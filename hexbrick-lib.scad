@@ -151,7 +151,7 @@ module ceiling_coordlist(cc) {
 // for lateral bricks.  The outermost lists are not hulled but common edges
 // are eliminated, which is useful for punctal bricks.  It seems possible that
 // there are uses for bricks that combine punctal and lateral features.
-module piece_coordlist(cc) {
+module piece_coordlist(cc, sc=undef) {
     maxx = max([for (i=cc) max([for(j=i) j[0]])]);
     maxy = max([for (i=cc) max([for(j=i) j[1]])]);
 
@@ -160,9 +160,10 @@ module piece_coordlist(cc) {
         color("blue") inner_walls(maxx+1, maxy+1);
         inner_volume_coordlist(cc);
     }
+    st = (sc == undef) ? cc : sc;
     color("orange") ceiling_coordlist(cc);
-    for(ii=[0:1:len(cc)-1]) {
-        ci = cc[ii];
+    for(ii=[0:1:len(st)-1]) {
+        ci = st[ii];
         for(jj=[0:1:len(ci)-1]) {
             cij = ci[jj];
             x = cij[0];
