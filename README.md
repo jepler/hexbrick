@@ -6,6 +6,12 @@ This is an openscad version of [David Barber's Interlocking hexagonal toy bricks
 suitable for fabrication on consumer-grade [FFF/FDM](https://en.wikipedia.org/wiki/Fused_deposition_modeling) 3D printers.
 "Released" versions of this project can be found [on thingiverse](http://www.thingiverse.com/thing:2216466).
 
+# Coordinate system
+Note that this is rotated 30 degrees vs the gcode coordinate system so that
+it fit better in a rectangular image.
+
+![Coordinate system for brick specification](coordinates-preview.png "Coordinate system for brick specification)
+
 # License
 Dual license.  At your option, you may use this project under the terms of either of these licenses:
 * [Creative Commons - Attribution - Share Alike](http://creativecommons.org/licenses/by-sa/3.0/)

@@ -1,4 +1,4 @@
-default: hexbrick-demo.scad hexbrick-demo.stl hexbrick-demo.png hexbrick-preview.png coordinates.png
+default: hexbrick-demo.scad hexbrick-demo.stl hexbrick-demo.png hexbrick-preview.png coordinates-preview.png
 
 hexbrick-demo.scad: hexbrick-lib.scad demo.scad
 	cat $^ > $@
@@ -20,6 +20,8 @@ coordinates.png: SCFLAGS := --camera=40,12.5,0,0,0,0,180 --projection=ortho --au
 hexbrick-preview.png: hexbrick-demo.png
 	pngtopnm $< | pnmscale .50 | pnmtopng > $@
 
+%-preview.png: %.png
+	pngtopnm $< | pnmscale .50 | pnmtopng > $@
 
 .PHONY: clean
 clean:
