@@ -172,3 +172,9 @@ module piece_coordlist(cc, sc=undef) {
         }
     }
 }
+
+module piece_punctual(cc, sc=undef) {
+    cc = [for (i=cc) [i]];
+    sc = (sc == undef) ? cc : [for (i=sc) [i]];
+    piece_coordlist(cc, sc);
+}
