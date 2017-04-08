@@ -2,3 +2,4 @@ hexbrick-demo.scad
 *.stl
 *.png
 !hexbrick-preview.png
+!coordinates-preview.png
