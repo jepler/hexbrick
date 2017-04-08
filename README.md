@@ -10,7 +10,7 @@ suitable for fabrication on consumer-grade [FFF/FDM](https://en.wikipedia.org/wi
 Note that this is rotated 30 degrees vs the gcode coordinate system so that
 it fit better in a rectangular image.
 
-![Coordinate system for brick specification](coordinates-preview.png "Coordinate system for brick specification)
+![Coordinate system for brick specification](coordinates-preview.png "Coordinate system for brick specification")
 
 # License
 Dual license.  At your option, you may use this project under the terms of either of these licenses:
