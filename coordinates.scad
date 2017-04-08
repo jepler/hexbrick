@@ -3,7 +3,7 @@ include <hexbrick-lib.scad>
 quick = false;
 
 module render_if() {
-    if(quick) render() children();
+    if(!quick) render() children();
     else children();
 }
 
