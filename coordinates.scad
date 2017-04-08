@@ -1,5 +1,12 @@
 include <hexbrick-lib.scad>
 
+quick = false;
+
+module render_if() {
+    if(quick) render() children();
+    else children();
+}
+
 R=-30;
 sz=2.6;
 
@@ -7,7 +14,7 @@ translate([-10,0,0])
 rotate([0,0,R])
 {
     color(c=[.8,.3,.3], alpha=.4)
-    // render()
+    render_if()
     intersection() {
         inner_volume_coordlist([[ [0,0],[9,0],[9,5],[0,5] ]]);
         translate([-base_width/2, -short_advance/2, -base_height])
