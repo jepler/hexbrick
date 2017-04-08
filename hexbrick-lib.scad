@@ -89,7 +89,7 @@ module hex_stud() {
     difference() {
         translate(-ceiling_thickness*Z/2)
         cylinder(r=hex_stud_width-stud_inset, h=stud_height+ceiling_thickness/2, $fn=6);
-        translate(-ceiling_thickness*Z)
+        if(0) translate(-ceiling_thickness*Z)
         cylinder(r=(hex_stud_width-stud_inset)/2, h=stud_height+2*ceiling_thickness, $fn=24);
     }
 }
